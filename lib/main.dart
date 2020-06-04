@@ -5,9 +5,9 @@ void main() => runApp(BMICalculator());
 
 class BMICalculator extends StatelessWidget {
   // ToDo info to convert color from # to hex using 0xFF
-  Color customPrimary = Color(0xFF121931);
+  Color customPrimary = Color(0xFF0A0E21);
   Color customAccent = Color(0xff295EF3);
-  Color customBody = Color(0xff070A14);
+  Color customBody = Color(0xFF0A0E21);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

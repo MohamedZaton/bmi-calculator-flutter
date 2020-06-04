@@ -6,30 +6,72 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color colorCard = Color(0xFF1D1E33);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('BMI CALCULATOR'),
       ),
-      body: Center(
-        child: Text('Body Text'),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Row(
+              children: <Widget>[
+                //container with boarder using box decorations
+                Expanded(
+                  child: ReasableCard(colorCard: colorCard),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15.0),
+                    decoration: BoxDecoration(
+                      color: colorCard,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.all(15.0),
+              decoration: BoxDecoration(
+                color: colorCard,
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: <Widget>[
+                //container with boarder using box decorations
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15.0),
+                    decoration: BoxDecoration(
+                      color: colorCard,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(15.0),
+                    decoration: BoxDecoration(
+                      color: colorCard,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
 
       //Todo step 2 custom them specific  widget;
-
-      floatingActionButton: Theme(
-        data: ThemeData(
-          accentColor: Colors.orange,
-          iconTheme: IconThemeData(
-            color: Colors.white,
-          ),
-        ),
-        child: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
-        ),
-      ),
     );
   }
 }
